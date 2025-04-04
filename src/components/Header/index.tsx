@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <Logo src={broccoliLogo} alt="Broccoli & Co Logo" />
-      <h1>Brocoli & Co</h1>
+      <h1>Broccoli & Co</h1>
     </HeaderWrapper>
   )
 }

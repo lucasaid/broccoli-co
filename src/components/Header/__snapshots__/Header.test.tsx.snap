@@ -10,11 +10,11 @@ exports[`Header > Should match snapshot 1`] = `
       >
         <img
           alt="Broccoli & Co Logo"
-          class="sc-fYsHOw eAmKbo"
+          class="sc-fYsHOw DjnVn"
           src="/@fs/Users/chrislucas/code/airwallex/broccoli-co/src/assets/broccoli.png"
         />
         <h1>
-          Brocoli & Co
+          Broccoli & Co
         </h1>
       </header>
     </div>
@@ -25,11 +25,11 @@ exports[`Header > Should match snapshot 1`] = `
     >
       <img
         alt="Broccoli & Co Logo"
-        class="sc-fYsHOw eAmKbo"
+        class="sc-fYsHOw DjnVn"
         src="/@fs/Users/chrislucas/code/airwallex/broccoli-co/src/assets/broccoli.png"
       />
       <h1>
-        Brocoli & Co
+        Broccoli & Co
       </h1>
     </header>
   </div>,

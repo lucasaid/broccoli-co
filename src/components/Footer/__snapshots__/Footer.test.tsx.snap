@@ -9,13 +9,13 @@ exports[`Footer > Should match snapshot 1`] = `
         class="sc-Qotzb gkOEGr"
       >
         <span>
-          Made with ♥ in Melbourne
+          Made with ♥ in Melbourne.
         </span>
         <br />
         <span>
           © 
           2025
-           Brocoli & Co. All rights reserved.
+           Broccoli & Co. All rights reserved.
         </span>
       </footer>
     </div>
@@ -25,13 +25,13 @@ exports[`Footer > Should match snapshot 1`] = `
       class="sc-Qotzb gkOEGr"
     >
       <span>
-        Made with ♥ in Melbourne
+        Made with ♥ in Melbourne.
       </span>
       <br />
       <span>
         © 
         2025
-         Brocoli & Co. All rights reserved.
+         Broccoli & Co. All rights reserved.
       </span>
     </footer>
   </div>,
