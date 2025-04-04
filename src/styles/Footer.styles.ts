@@ -1,6 +1,6 @@
 import {styled} from "styled-components";
 
-export const FooterWrapper = styled.footer`
+export const Footer = styled.footer`
   background-color: var(--reseda-green);
   border-top: 1px solid var(--dark-moss-green);
   color: var(--pakistan-green);

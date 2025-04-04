@@ -46,7 +46,7 @@ Local server will be spun up here: http://localhost:5173/
 
 
 ## Other things to consider
-- will footer be fixed? eg. if the content is more than that can fit on screen (mobile, small screen) do we scroll the content area with footer fixed? or will the footer move below the view.
+- is the header fixed on scroll when content exceeds page height?
 - should there be a close button for the modal? will help with accessibility
 - does the modal close on the background overlay click
 - should there be a direct link to the form so it is automatically opened?
@@ -65,3 +65,4 @@ Local server will be spun up here: http://localhost:5173/
 
 ## Issues/Future
 - Update image to be svg (free image I got required a lot of messing around to get the svg to be contained in it's viewport correctly)
+- pull out center styles in content wrapper to be it's own element to handle more content driven pages.

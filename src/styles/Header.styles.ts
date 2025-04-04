@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-export const HeaderWrapper = styled.header`
+export const Header = styled.header`
   align-items: center;
   background-color: var(--reseda-green);
   border-bottom: 1px solid var(--dark-moss-green);
