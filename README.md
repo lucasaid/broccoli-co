@@ -61,6 +61,7 @@ Local server will be spun up here: http://localhost:5173/
 
 ## Extra Notes
 - Implemented a light/dark mode media query which will change appearance based on users preferences
+- Originally wanted to separate the header and footer into separate components but for this test i felt it was unnecessary due to the simplicity of the content within, if there was more complexity eg. menu in the header or extended link list in footer. then I would keep them as separate testable components.
 
 
 ## Issues/Future
