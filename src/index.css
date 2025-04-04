@@ -22,7 +22,7 @@
 
   /* Base Styles */
 
-  font-family: Roboto, sans-serif;
+  font-family: Playfair Display, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   font-size: var(--fs-base);
@@ -37,10 +37,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 h1 {
+  font-family: Oswald, sans-serif;
   font-size: var(--fs-md);
+  line-height: var(--fs-md);
 }
 h2 {
-  font-size: var(--fs-lg);
+  font-family: Oswald, sans-serif;
+  margin: 0;
+  font-size: var(--fs-xl);
+  line-height: var(--fs-xl);
 }
 
 a {

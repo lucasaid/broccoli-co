@@ -11,7 +11,8 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@fontsource/roboto": "^5.2.5",
+    "@fontsource/oswald": "^5.2.5",
+    "@fontsource/playfair-display": "^5.2.5",
     "@testing-library/react": "^16.3.0",
     "jsdom": "^26.0.0",
     "react": "^19.0.0",

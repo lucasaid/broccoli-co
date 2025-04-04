@@ -8,7 +8,10 @@ importers:
 
   .:
     dependencies:
-      '@fontsource/roboto':
+      '@fontsource/oswald':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/playfair-display':
         specifier: ^5.2.5
         version: 5.2.5
       '@testing-library/react':
@@ -445,8 +448,11 @@ packages:
     resolution: {integrity: sha512-ZAoA40rNMPwSm+AeHpCq8STiNAwzWLJuP8Xv4CHIc9wv/PSuExjMrmjfYNj682vW0OOiZ1HKxzvjQr9XZIisQA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@fontsource/roboto@5.2.5':
-    resolution: {integrity: sha512-70r2UZ0raqLn5W+sPeKhqlf8wGvUXFWlofaDlcbt/S3d06+17gXKr3VNqDODB0I1ASme3dGT5OJj9NABt7OTZQ==}
+  '@fontsource/oswald@5.2.5':
+    resolution: {integrity: sha512-Sw8ayEYCoOzG2ISw5HaX3d5ILt3OEG2VFX2nzHaGywYD9p0WvVfO4SBK5/y9JGuOty3jA6OhptxOYZgwjTTPLQ==}
+
+  '@fontsource/playfair-display@5.2.5':
+    resolution: {integrity: sha512-4PsPkErCP0M5TikYzdhPGaCAU09qFux9ZlrNFA89KTCdQcZKGV0LJXVOSX8UFuo9xEgdTmth+k+j2nQA761fTg==}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -2565,7 +2571,9 @@ snapshots:
       '@eslint/core': 0.13.0
       levn: 0.4.1
 
-  '@fontsource/roboto@5.2.5': {}
+  '@fontsource/oswald@5.2.5': {}
+
+  '@fontsource/playfair-display@5.2.5': {}
 
   '@humanfs/core@0.19.1': {}
 
