@@ -8,14 +8,17 @@ import './index.css'
 import Index from './pages/Index'
 import { BrowserRouter, Route, Routes } from "react-router";
 import NotFound from './pages/NotFound';
+import Layout from './layouts/Layout';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
-      <Routes>
-        <Route path="*" element={<NotFound />} />
-        <Route path="/" element={<Index />} />
-      </Routes>
+      <Layout>
+        <Routes>
+          <Route path="*" element={<NotFound />} />
+          <Route path="/" element={<Index />} />
+        </Routes>
+      </Layout>
     </BrowserRouter>
   </StrictMode>,
 )
