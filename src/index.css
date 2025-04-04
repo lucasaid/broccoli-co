@@ -1,16 +1,42 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* Variables */
+  /* Font Sizes */
+  --fs-sm: clamp(0.8rem, 0.17vi + 0.76rem, 0.89rem);
+  --fs-base: clamp(1rem, 0.34vi + 0.91rem, 1.19rem);
+  --fs-md: clamp(1.25rem, 0.61vi + 1.1rem, 1.58rem);
+  --fs-lg: clamp(1.56rem, 1vi + 1.31rem, 2.11rem);
+  --fs-xl: clamp(1.95rem, 1.56vi + 1.56rem, 2.81rem);
+  --fs-xxl: clamp(2.44rem, 2.38vi + 1.85rem, 3.75rem);
+  --fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
+  /* Colours */
+  --pakistan-green: rgb(21, 36, 11);
+  --dark-moss-green: #3D5F22ff;
+  --dark-moss-green-2: #295110ff;
+  --reseda-green: #5C825Bff;
+  --lighter-green: rgb(195, 231, 194);
+  --mindaro: rgb(250, 255, 239);
+
+
+  /* Base Styles */
+
+  font-family: Roboto, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var(--mindaro);
+  background-color: var(--pakistan-green);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+h1 {
+  font-size: var(--fs-md);
+}
+h2 {
+  font-size: var(--fs-lg);
 }
 
 a {
@@ -28,8 +54,8 @@ body {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: var(--pakistan-green);
+    background-color: var(--mindaro);
   }
   a:hover {
     color: #747bff;
