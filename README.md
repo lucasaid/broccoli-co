@@ -49,12 +49,13 @@ Local server will be spun up here: http://localhost:5173/
 - will footer be fixed? eg. if the content is more than that can fit on screen (mobile, small screen) do we scroll the content area with footer fixed? or will the footer move below the view.
 - should there be a close button for the modal? will help with accessibility
 - does the modal close on the background overlay click
+- should there be a direct link to the form so it is automatically opened?
 
 
 ## Components to consider
 - Header
 - Footer
-- Button
+- Button (for this use case i would probably just stick with creating a styled base input button)
 - Modal
 - Input field
 
