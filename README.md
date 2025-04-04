@@ -1,54 +1,66 @@
-# React + TypeScript + Vite
+# Airwallex Test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## To run
+Using pnpm for more speed and disk space efficiency.  
 
-Currently, two official plugins are available:
+Install dependencies:  
+`pnpm install`  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Start server:  
+`pnpm dev`  
 
-## Expanding the ESLint configuration
+Local server will be spun up here: http://localhost:5173/  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Requirements
+- Landing page
+  - Header
+  - Intro text
+  - Button
+  - Footer
+  - full height with footer locked to bottom of screen
+- Button triggers modal
+- Modal contains a form
+  - title
+  - Full name
+  - Email
+  - Confirm email
+  - Button
+  - background overlay
+  - close modal?
+  - if user clicks outside modal does it close?
+- Button validates data
+  - max lengths?
+  - trim space
+  - validate email format
+  - check confirm email
+- Error if validation does not pass with pointer to fields that have issues
+- Button POSTs to API endpoint
+- Loading state for sending data
+- Error on issue with API endpoint
+- Success message
+  - rendered in modal
+  - title
+  - description
+  - button that closes modal
+- Mobile first styling
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Other things to consider
+- will footer be fixed? eg. if the content is more than that can fit on screen (mobile, small screen) do we scroll the content area with footer fixed? or will the footer move below the view.
+- should there be a close button for the modal? will help with accessibility
+- does the modal close on the background overlay click
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## Components to consider
+- Header
+- Footer
+- Button
+- Modal
+- Input field
+
+## Extra Notes
+- Implemented a light/dark mode media query which will change appearance based on users preferences
+
+
+## Issues/Future
+- Update image to be svg (free image I got required a lot of messing around to get the svg to be contained in it's viewport correctly)
