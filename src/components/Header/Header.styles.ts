@@ -16,4 +16,9 @@ export const HeaderWrapper = styled.header`
 export const Logo = styled.img`
   height: 2rem;
   margin-right: 10px;
+  filter: 
+        drop-shadow( 1px  0px 0px black) 
+        drop-shadow(-1px  0px 0px black)
+        drop-shadow( 0px  1px 0px black) 
+        drop-shadow( 0px -1px 0px black);
 `;
