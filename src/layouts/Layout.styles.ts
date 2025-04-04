@@ -12,6 +12,9 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   padding: var(--container-padding-height) var(--container-padding-width);
   &:after {
     position: absolute;
