@@ -5,10 +5,17 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import './index.css'
-import App from './layouts/Layout.tsx'
+import Index from './pages/Index'
+import { BrowserRouter, Route, Routes } from "react-router";
+import NotFound from './pages/NotFound';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="*" element={<NotFound />} />
+        <Route path="/" element={<Index />} />
+      </Routes>
+    </BrowserRouter>
   </StrictMode>,
 )
