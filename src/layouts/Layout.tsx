@@ -1,10 +1,12 @@
+import Footer from "../components/Footer"
 import Header from "../components/Header"
-import { Container } from "./Layout.styles"
+import { Container, Content } from "./Layout.styles"
 const Layout = ({children}: {children: React.ReactNode}) => {
   return (
     <Container>
       <Header />
-      {children}
+      <Content>{children}</Content>
+      <Footer />
     </Container>
   )
 }
