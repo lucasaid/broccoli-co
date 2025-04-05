@@ -43,6 +43,7 @@ Local server will be spun up here: http://localhost:5173/
   - description
   - button that closes modal
 - Mobile first styling
+- Abort controller for unmounting modal before finish
 
 
 ## Other things to consider
