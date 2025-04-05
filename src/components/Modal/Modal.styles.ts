@@ -24,18 +24,41 @@ export const Overlay = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--mindaro);
   height: 100%;
+  opacity: 0.3;
   z-index: -1;
-  animation: ${fadeIn} 0.3s ease-in-out;
+  @media (prefers-color-scheme: light) {
+    background-color: var(--pakistan-green);
+  }
 `;
 export const InnerWrapper = styled.div`
-  background-color: white;
+  background-color: var(--pakistan-green);
   padding: 20px;
-  min-width: 500px;
+  max-width: 500px;
+  width: 100%;
+  box-sizing: border-box;
   min-height: 200px;
   border-radius: 5px;
-  color: black; 
   position: relative;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   animation: ${fadeIn} 0.3s ease-in-out;
+  @media (prefers-color-scheme: light) {
+    background-color: var(--mindaro);
+  }
+`;
+export const CloseButton = styled.button`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
 `;

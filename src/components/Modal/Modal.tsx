@@ -1,4 +1,4 @@
-import { InnerWrapper, ModalWrapper,Overlay } from "./Modal.styles";
+import { CloseButton, InnerWrapper, ModalWrapper,Overlay } from "./Modal.styles";
 interface ModalProps {
   isOpen: boolean;
   closeModal: () => void;
@@ -9,7 +9,10 @@ const Modal = ({ children, isOpen, closeModal }: ModalProps) => {
     isOpen && (
       <ModalWrapper>
         <Overlay role="presentation" onClick={closeModal} />
-        <InnerWrapper>{children}</InnerWrapper>
+        <InnerWrapper>
+          <CloseButton onClick={closeModal}>X</CloseButton>
+          {children}
+        </InnerWrapper>
       </ModalWrapper>
     )
   );
