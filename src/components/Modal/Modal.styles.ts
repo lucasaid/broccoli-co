@@ -38,7 +38,7 @@ export const InnerWrapper = styled.div`
   max-width: 500px;
   width: 100%;
   box-sizing: border-box;
-  min-height: 200px;
+  min-height: 350px;
   border-radius: 5px;
   position: relative;
   display: flex;

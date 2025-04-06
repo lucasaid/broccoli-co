@@ -11,8 +11,9 @@ const rotation = keyframes`
 `
 
 export const Loader = styled.div`
-width: 48px;
+  width: 48px;
   height: 48px;
+  margin: 4.3rem 0;
   border: 5px solid var(--lighter-green);
   border-bottom-color: var(--reseda-green);
   border-radius: 50%;
