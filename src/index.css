@@ -8,30 +8,30 @@
   --fs-xl: clamp(1.95rem, 1.56vi + 1.56rem, 2.81rem);
   --fs-xxl: clamp(2.44rem, 2.38vi + 1.85rem, 3.75rem);
   --fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
+
   /* Colours */
-  --pakistan-green: rgb(21, 36, 11);
-  --dark-moss-green: #3D5F22ff;
-  --dark-moss-green-2: #295110ff;
-  --reseda-green: #5C825Bff;
+  --dark-moss-green-2: rgb(43, 50, 39);
+  --dark-moss-green: #3d5f22ff;
+  --error-dark: #ff7a7a;
+  --error-light: #AD0000;
   --lighter-green: rgb(195, 231, 194);
   --mindaro: rgb(250, 255, 239);
-  --error-dark: #ff7a7a;
-  --error-light: #ff2020;
-  
+  --pakistan-green: rgb(21, 36, 11);
+  --reseda-green: #5c825b;
+
   --container-padding-width: 1.56rem;
   --container-padding-height: 0.8rem;
-
 
   /* Base Styles */
 
   font-family: Playfair Display, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
   font-size: var(--fs-base);
+  font-weight: 400;
+  line-height: 1.5;
 
+  background-color: var(--pakistan-green);
   color-scheme: light dark;
   color: var(--mindaro);
-  background-color: var(--pakistan-green);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -45,18 +45,9 @@ h1 {
 }
 h2 {
   font-family: Oswald, sans-serif;
-  margin: 0;
   font-size: var(--fs-xl);
   line-height: var(--fs-xl);
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  margin: 0;
 }
 
 body {
@@ -65,10 +56,7 @@ body {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: var(--pakistan-green);
     background-color: var(--mindaro);
-  }
-  a:hover {
-    color: #747bff;
+    color: var(--pakistan-green);
   }
 }

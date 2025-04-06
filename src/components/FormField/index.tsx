@@ -26,6 +26,7 @@ export const FormField = ({
   <>
     <Input
       type={type}
+      aria-label={placeholder}
       autoFocus={autoFocus}
       placeholder={placeholder}
       autoComplete={autoComplete}
