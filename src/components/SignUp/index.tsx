@@ -68,7 +68,7 @@ export const SignUp = ({
             type="text"
             placeholder="Full Name"
             name="name"
-            value="Test"
+            autoFocus
             register={register}
             error={errors.name}
           />

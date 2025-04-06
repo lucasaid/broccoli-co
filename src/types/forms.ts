@@ -20,6 +20,7 @@ export type FormFieldProps = {
   error: FieldError | undefined;
   valueAsNumber?: boolean;
   value?: string;
+  autoFocus?: boolean;
 };
 
 export type ValidFieldNames = "email" | "name" | "confirmEmail";

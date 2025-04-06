@@ -10,11 +10,13 @@ const FormField: React.FC<FormFieldProps> = ({
   register,
   error,
   valueAsNumber,
+  autoFocus,
 }) => (
   <>
     <Input
       type={type}
       value={value}
+      autoFocus={autoFocus}
       placeholder={placeholder}
       {...register(name, { valueAsNumber })}
       error={error || undefined}
