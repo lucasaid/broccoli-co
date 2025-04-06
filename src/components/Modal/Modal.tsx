@@ -6,6 +6,13 @@ import {
   Overlay,
 } from "./Modal.styles";
 
+/**
+ * A modal component that wraps the content in a centered modal.
+ *
+ * @param {React.ReactNode} props.children The content of the modal
+ * @param {boolean} props.isOpen Whether the modal is open
+ * @param {() => void} props.closeModal Function to close the modal
+ */
 export const Modal = ({ children, isOpen, closeModal }: ModalProps) => {
   return (
     isOpen && (

@@ -16,6 +16,22 @@ import { SignUpSchema, FormData } from "../../types/forms";
 import { COMPANY_NAME } from "../../utils/constants";
 import { SignUpProps } from "../../types/common";
 
+/**
+ * A modal component for requesting an invite to the service.
+ *
+ * It renders a form with fields for full name, email and confirm email. When the
+ * form is submitted, it sends a request to the server with the provided data,
+ * and renders a success message if the response is "Registered". If the response
+ * is not "Registered", it renders an error message.
+ *
+ * It also renders a loader when the request is in progress.
+ *
+ * The component is closed when the user clicks outside of it or presses the
+ * Escape key.
+ *
+ * @param {boolean} isOpen - Whether the modal is open or not.
+ * @param {() => void} closeModal - A function to close the modal.
+ */
 export const SignUp = ({
   isOpen,
   closeModal,

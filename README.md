@@ -2,6 +2,7 @@
 
 ## To run
 Using pnpm for more speed and disk space efficiency.  
+https://pnpm.io/
 
 Install dependencies:  
 `pnpm install`  
@@ -29,7 +30,7 @@ Local server will be spun up here: http://localhost:5173/
   - close modal?
   - if user clicks outside modal does it close?
 - Button validates data
-  - max lengths?
+  - min lengths
   - trim space
   - validate email format
   - check confirm email
@@ -61,10 +62,12 @@ Local server will be spun up here: http://localhost:5173/
 - Input field
 
 ## Extra Notes
-- Implemented a light/dark mode media query which will change appearance based on users preferences
+- Implemented a light/dark mode media query which will change appearance based on users preferences. Defaults to dark scheme
 - Originally wanted to separate the header and footer into separate components but for this test i felt it was unnecessary due to the simplicity of the content within, if there was more complexity eg. menu in the header or extended link list in footer. then I would keep them as separate testable components.
 
 
 ## Issues/Future
 - Update image to be svg (free image I got required a lot of messing around to get the svg to be contained in it's viewport correctly)
 - pull out center styles in content wrapper to be it's own element to handle more content driven pages.
+- Language translation?
+- add e2e tests using playwright or cypress

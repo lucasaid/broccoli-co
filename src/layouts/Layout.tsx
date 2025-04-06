@@ -5,6 +5,12 @@ import { Header, Logo } from "../styles/Header.styles";
 
 import broccoliLogo from "../assets/broccoli.png";
 
+/**
+ * Layout component that provides a structured page layout with a header, content area, and footer.
+ *
+ * @param {React.ReactNode} props.children - The content to be rendered within the layout.
+ */
+
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <Container>
