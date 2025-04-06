@@ -3,7 +3,7 @@ interface RequestInvite {
   email?: string;
 }
 
-export const requestInvite = async ({ name, email }: RequestInvite) => {
+export const requestInvite = async ({ name, email }: RequestInvite, signal?: AbortSignal) => {
   const response = await fetch(
     "https://l94wc2001h.execute-api.ap-southeast-2.amazonaws.com/prod/fake-auth",
     {
@@ -12,6 +12,7 @@ export const requestInvite = async ({ name, email }: RequestInvite) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ name, email }),
+      signal,
     }
   );
 
