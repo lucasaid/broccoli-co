@@ -1,5 +1,5 @@
-import { describe, test, expect } from "vitest";
 import { act, renderHook } from "@testing-library/react";
+import { describe, test, expect } from "vitest";
 import { useModal } from "./useModal";
 
 describe("useModal", () => {
