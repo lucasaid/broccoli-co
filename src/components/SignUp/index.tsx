@@ -1,5 +1,5 @@
 import { SubmitHandler, useForm } from "react-hook-form";
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import Form from "../Form";
@@ -22,7 +22,7 @@ export const SignUp = ({
 }: SignUpProps) => {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
-  const [controller] = useState(new AbortController());
+  const [controller] = useState(() => new AbortController());
   const [apiError, setApiError] = useState<string | null>(null);
   const {
     register,
@@ -30,14 +30,26 @@ export const SignUp = ({
     reset,
     formState: { errors },
   } = useForm<FormData>({
-    resolver: zodResolver(SignUpSchema), // Apply the zodResolver
+    resolver: zodResolver(SignUpSchema),
   });
 
-  const closeSignUp = () => {
+  const closeSignUp = useCallback(() => {
     controller.abort();
     reset();
     closeModal();
+  }, [controller, reset, closeModal]);
+
+  const handleKeyDown = (event: KeyboardEvent) => {
+    if (event.key === "Escape") {
+      closeSignUp();
+    }
   };
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  },[])
   const submitForm: SubmitHandler<FormData> = async (data) => {
     try {
       setLoading(true);
@@ -49,27 +61,32 @@ export const SignUp = ({
         },
         controller.signal
       );
-      setLoading(false);
       if (response === "Registered") {
         setSuccess(true);
       } else {
-        throw new Error();
+        throw new Error("Unexpected response");
       }
     } catch (error) {
-      setApiError(
-        error instanceof Error ? error.message : "Something went wrong"
-      );
+      if (error instanceof DOMException && error.name === "AbortError") {
+        console.warn("Request was aborted");
+      } else {
+        setApiError(
+          error instanceof Error ? error.message : "Something went wrong"
+        );
+      }
+    } finally {
       setLoading(false);
     }
   };
   return (
     <Modal isOpen={isOpen} closeModal={closeSignUp}>
-      {!success && (
+      {!success ? (
         <>
           <h1>Request an invite</h1>
           <Hr />
-          {loading && <Loader />}
-          {!loading && (
+          {loading ? (
+            <Loader />
+          ) : (
             <Form submitForm={handleSubmit(submitForm)} apiError={apiError}>
               <FormField
                 type="text"
@@ -98,13 +115,12 @@ export const SignUp = ({
             </Form>
           )}
         </>
-      )}
-      {success && (
+      ) : (
         <>
           <h1>All Done!</h1>
           <Hr />
           <p>
-            You'll be the first to experience {COMPANY_NAME}. when we launch.
+            You'll be the first to experience {COMPANY_NAME} when we launch.
           </p>
           <Button onClick={closeSignUp}>Ok</Button>
         </>

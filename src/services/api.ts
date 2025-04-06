@@ -30,11 +30,8 @@ export const requestInvite = async (
   );
 
   if (!response.ok) {
-    const error = await response.json();
-    if (!error || !error.errorMessage) {
-      throw new Error("Unknown error");
-    }
-    throw new Error(error.errorMessage);
+    const { errorMessage } = await response.json();
+    throw new Error(errorMessage || "Unknown error");
   }
 
   return response.json();
