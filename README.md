@@ -51,12 +51,13 @@ Local server will be spun up here: http://localhost:5173/
 - is the header fixed on scroll when content exceeds page height?
 - should there be a close button for the modal? will help with accessibility
 - does the modal close on the background overlay click
-- should there be a direct link to the form so it is automatically opened?
+- should there be a direct link to the form so it is automatically opened? could be useful for marketing
 
 
 ## Components to consider
 - Header
 - Footer
+- Form
 - Button (for this use case i would probably just stick with creating a styled base input button)
 - Modal
 - Input field
@@ -66,8 +67,8 @@ Local server will be spun up here: http://localhost:5173/
 - Originally wanted to separate the header and footer into separate components but for this test i felt it was unnecessary due to the simplicity of the content within, if there was more complexity eg. menu in the header or extended link list in footer. then I would keep them as separate testable components.
 
 
-## Issues/Future
+## Issues/Future implementation
 - Update image to be svg (free image I got required a lot of messing around to get the svg to be contained in it's viewport correctly)
-- pull out center styles in content wrapper to be it's own element to handle more content driven pages.
-- Language translation?
+- pull out center styling in content wrapper to be it's own element to handle more content driven pages.
+- Language translation
 - add e2e tests using playwright or cypress
