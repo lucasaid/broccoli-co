@@ -1,9 +1,9 @@
-interface RequestInvite {
-  name: string;
-  email?: string;
-}
+import { RequestInvite } from "../types/common";
 
-export const requestInvite = async ({ name, email }: RequestInvite, signal?: AbortSignal) => {
+export const requestInvite = async (
+  { name, email }: RequestInvite,
+  signal?: AbortSignal
+) => {
   const response = await fetch(
     "https://l94wc2001h.execute-api.ap-southeast-2.amazonaws.com/prod/fake-auth",
     {

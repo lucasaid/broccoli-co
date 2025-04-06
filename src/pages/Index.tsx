@@ -1,6 +1,6 @@
-import { useModal } from "../hooks/useModal";
 import { Button } from "../styles/Button.styles";
-import { SignUp } from "../components/SignUp";
+import SignUp from "../components/SignUp";
+import { useModal } from "../hooks/useModal";
 
 const Index = () => {
   const { openModal, isOpen, closeModal } = useModal();

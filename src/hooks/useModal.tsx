@@ -22,3 +22,5 @@ export const useModal = () => {
     toggleModal,
   };
 };
+
+export default useModal;

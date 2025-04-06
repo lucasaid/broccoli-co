@@ -1,16 +1,18 @@
-import { CloseButton, InnerWrapper, ModalWrapper,Overlay } from "./Modal.styles";
-interface ModalProps {
-  isOpen: boolean;
-  closeModal: () => void;
-  children: React.ReactNode
-}
-const Modal = ({ children, isOpen, closeModal }: ModalProps) => {
+import { ModalProps } from "../../types/common";
+import {
+  CloseButton,
+  InnerWrapper,
+  ModalWrapper,
+  Overlay,
+} from "./Modal.styles";
+
+export const Modal = ({ children, isOpen, closeModal }: ModalProps) => {
   return (
     isOpen && (
       <ModalWrapper>
         <Overlay role="presentation" onClick={closeModal} />
         <InnerWrapper>
-          <CloseButton onClick={closeModal}>X</CloseButton>
+          <CloseButton aria-label="Close" onClick={closeModal}>X</CloseButton>
           {children}
         </InnerWrapper>
       </ModalWrapper>
@@ -18,4 +20,4 @@ const Modal = ({ children, isOpen, closeModal }: ModalProps) => {
   );
 };
 
-export default Modal
+export default Modal;

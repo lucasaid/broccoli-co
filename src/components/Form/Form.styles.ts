@@ -1,17 +1,20 @@
-import {styled} from "styled-components";
+import { styled } from "styled-components";
 
 export const FormElement = styled.form`
-  width: 100%;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 100%;
+  button:last-of-type {
+    margin-top: 50px;
+  }
 `;
 
 export const ApiError = styled.span`
   color: var(--error-dark);
-  margin-bottom: 10px;
   font-size: 14px;
-  font-weight: bold;  
+  font-weight: bold;
+  margin-bottom: 10px;
   @media (prefers-color-scheme: light) {
     color: var(--error-light);
   }

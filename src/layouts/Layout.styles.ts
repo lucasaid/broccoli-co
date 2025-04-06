@@ -1,4 +1,4 @@
-import {styled} from "styled-components"
+import { styled } from "styled-components";
 
 export const Container = styled.div`
   display: flex;
@@ -6,29 +6,29 @@ export const Container = styled.div`
   margin: 0 auto;
   max-width: 1920px;
   min-height: 100vh;
-`
+`;
 export const Content = styled.div`
-  flex-grow: 1;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  position: relative;
+  flex-grow: 1;
   justify-content: center;
-  align-items: center;
-  text-align: center;
   padding: var(--container-padding-height) var(--container-padding-width);
+  position: relative;
+  text-align: center;
   &:after {
+    background-attachment: fixed;
+    background-image: url("/broccoli_farm.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.1;
     position: absolute;
     top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    content: "";
-    background-image: url("/broccoli_farm.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    opacity: 0.1;
     z-index: -1;
   }
-`
+`;

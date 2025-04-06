@@ -1,8 +1,10 @@
+import { COMPANY_NAME } from "../utils/constants";
+import { Container, Content } from "./Layout.styles";
 import { Footer } from "../styles/Footer.styles";
 import { Header, Logo } from "../styles/Header.styles";
-import { Container, Content } from "./Layout.styles";
-import broccoliLogo from '../assets/broccoli.png'
-import { COMPANY_NAME } from "../utils/constants";
+
+import broccoliLogo from "../assets/broccoli.png";
+
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <Container>
