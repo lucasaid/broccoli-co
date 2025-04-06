@@ -8,6 +8,8 @@ import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import FormField from "../FormField";
 import Modal from "../Modal/Modal";
+import { Button } from "../../styles/Button.styles";
+import { COMPANY_NAME } from "../../utils/constants";
 
 export const SignUp = ({
   isOpen,
@@ -17,6 +19,7 @@ export const SignUp = ({
   closeModal: () => void;
 }) => {
   const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
   const [controller] = useState(new AbortController());
   const [apiError, setApiError] = useState<string | null>(null);
   const {
@@ -46,7 +49,7 @@ export const SignUp = ({
       );
       setLoading(false);
       if (response === "Registered") {
-        setApiError(response);
+        setSuccess(true);
       } else {
         throw new Error();
       }
@@ -59,7 +62,7 @@ export const SignUp = ({
   };
   return (
     <Modal isOpen={isOpen} closeModal={closeSignUp}>
-      <h1>Request an invite</h1>
+      {!success && <><h1>Request an invite</h1>
       <Hr />
       {loading && <Loader />}
       {!loading && (
@@ -76,7 +79,6 @@ export const SignUp = ({
             type="email"
             placeholder="Email"
             name="email"
-            value="test@test.com"
             register={register}
             error={errors.email}
           />
@@ -84,12 +86,17 @@ export const SignUp = ({
             type="email"
             placeholder="Confirm Email"
             name="confirmEmail"
-            value="test@test.com"
             register={register}
             error={errors.confirmEmail}
           />
         </Form>
-      )}
+      )}</>}
+      {success && <>
+        <h1>All Done!</h1>
+        <Hr />
+        <p>You'll be the first to experience ${COMPANY_NAME}. when we launch.</p>
+        <Button onClick={closeSignUp}>Ok</Button>
+      </>}
     </Modal>
   );
 };
